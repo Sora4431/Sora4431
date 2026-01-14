@@ -11,10 +11,6 @@
 | 🥇 **Gold** | $4,638.70/oz | 2026-01-14 |
 <!--END_MARKET_DATA-->
 
-## 📈 Activity Graph
-
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Sora4431&theme=github-dark)
-
 ---
 
 *Market data auto-updated daily at 16:00 JST*
