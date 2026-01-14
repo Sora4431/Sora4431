@@ -54,13 +54,14 @@ jobs:
               content = f.read()
           
           # マーケットデータセクションを更新
-          new_table = f"""<!--START_MARKET_DATA-->
-| Market | Price | Date |
-|--------|-------|------|
-| 📈 **Nikkei 225** | {nikkei} | {date} |
-| 🇺🇸 **S&P 500** | {sp500} | {date} |
-| 🥇 **Gold** | {gold} | {date} |
-<!--END_MARKET_DATA-->"""
+          new_table = f"""
+          <!--START_MARKET_DATA-->
+          | Market | Price | Date |   
+          |--------|-------|------|
+          | 📈 **Nikkei 225** | {nikkei} | {date} |
+          | 🇺🇸 **S&P 500** | {sp500} | {date} |
+          | 🥇 **Gold** | {gold} | {date} |
+          <!--END_MARKET_DATA-->"""
           
           # セクションを置換
           pattern = r'<!--START_MARKET_DATA-->.*?<!--END_MARKET_DATA-->'
