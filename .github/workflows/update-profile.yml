@@ -87,23 +87,13 @@ jobs:
           
           # マーケットデータセクションを更新
           new_table = f"""<!--START_MARKET_DATA-->
-| Market | Price | Change | Date |
-|--------|-------|--------|------|
-| 📈 **Nikkei 225** | {nikkei} | {nikkei_arrow} {nikkei_change:+.2f} ({nikkei_pct:+.2f}%) | {date} |
-| 🇺🇸 **S&P 500** | {sp500} | {sp500_arrow} {sp500_change:+.2f} ({sp500_pct:+.2f}%) | {date} |
-| 🥇 **Gold** | {gold} | {gold_arrow} {gold_change:+.2f} ({gold_pct:+.2f}%) | {date} |
-
-### 📊 30-Day Trends
-
-#### Nikkei 225
-![Nikkei Chart]({nikkei_chart_url})
-
-#### S&P 500
-![SP500 Chart]({sp500_chart_url})
-
-#### Gold
-![Gold Chart]({gold_chart_url})
-<!--END_MARKET_DATA-->"""
+          | Market | Price | Change | Date |
+          |--------|-------|--------|------|
+          | 📈 **Nikkei 225** | {nikkei} | {nikkei_arrow} {nikkei_change:+.2f} ({nikkei_pct:+.2f}%) | {date} |
+          | 🇺🇸 **S&P 500** | {sp500} | {sp500_arrow} {sp500_change:+.2f} ({sp500_pct:+.2f}%) | {date} |
+          | 🥇 **Gold** | {gold} | {gold_arrow} {gold_change:+.2f} ({gold_pct:+.2f}%) | {date} |
+          
+          <!--END_MARKET_DATA-->"""
           
           # セクションを置換
           pattern = r'<!--START_MARKET_DATA-->.*?<!--END_MARKET_DATA-->'
