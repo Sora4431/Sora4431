@@ -11,6 +11,5 @@
 | 🥇 **Gold** | $4,638.70/oz | 2026-01-14 |
 <!--END_MARKET_DATA-->
 
----
 
 *Market data auto-updated daily at 16:00 JST*
