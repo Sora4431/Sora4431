@@ -1,0 +1,86 @@
+name: Update Profile with Market Data
+
+on:
+  schedule:
+    - cron: "0 8 * * *" # 17:00 JST (データ取得後)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+        with:
+          repository: Sora4431/Sora4431
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Checkout market-data repository
+        uses: actions/checkout@v4
+        with:
+          repository: Sora4431/market-data
+          path: market-data
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      
+      - name: Install dependencies
+        run: pip install pandas
+      
+      - name: Update README with market data
+        run: |
+          python << 'EOF'
+          import pandas as pd
+          
+          # CSVから最新データを取得
+          df = pd.read_csv('market-data/market_data.csv')
+          latest = df.iloc[-1]
+          
+          date = latest['date']
+          nikkei = f"¥{latest['nikkei_225']:,.2f}"
+          sp500 = f"${latest['sp500']:,.2f}"
+          gold = f"${latest['gold_usd']:,.2f}/oz"
+          
+          # README.mdを読み込み
+          with open('README.md', 'r') as f:
+              content = f.read()
+          
+          # マーケットデータセクションを更新
+          new_table = f"""<!--START_MARKET_DATA-->
+| Market | Price | Date |
+|--------|-------|------|
+| 📈 **Nikkei 225** | {nikkei} | {date} |
+| 🇺🇸 **S&P 500** | {sp500} | {date} |
+| 🥇 **Gold** | {gold} | {date} |
+<!--END_MARKET_DATA-->"""
+          
+          # セクションを置換
+          import re
+          pattern = r'<!--START_MARKET_DATA-->.*?<!--END_MARKET_DATA-->'
+          content = re.sub(pattern, new_table, content, flags=re.DOTALL)
+          
+          # README.mdを保存
+          with open('README.md', 'w') as f:
+              f.write(content)
+          
+          print(f"Updated market data for {date}")
+          EOF
+      
+      - name: Commit and push changes
+        run: |
+          git config user.name "Sora4431"
+          git config user.email "Sora4431@users.noreply.github.com"
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "📊 Update market data: Nikkei, S&P 500, Gold"
+            git push
+          fi
