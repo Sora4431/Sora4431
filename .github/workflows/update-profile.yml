@@ -2,7 +2,7 @@ name: Update Profile with Market Data
 
 on:
   schedule:
-    - cron: "0 8 * * *" # 17:00 JST (データ取得後)
+    - cron: "0 8 * * *" # 17:00 JST
   workflow_dispatch:
 
 permissions:
@@ -33,34 +33,77 @@ jobs:
       - name: Install dependencies
         run: pip install pandas
       
-      - name: Update README with market data
+      - name: Update README with market data and charts
         run: |
           cat > update_readme.py << 'PYTHON_SCRIPT'
           import pandas as pd
           import re
+          from urllib.parse import quote
           
           # CSVから最新データを取得
           df = pd.read_csv('market-data/market_data.csv')
           latest = df.iloc[-1]
           
           date = latest['date']
+          
+          # 最新の価格と変化
           nikkei = f"¥{latest['nikkei_225']:,.2f}"
+          nikkei_change = latest['nikkei_change']
+          nikkei_pct = latest['nikkei_pct']
+          nikkei_arrow = "📈" if nikkei_change >= 0 else "📉"
+          nikkei_color = "green" if nikkei_change >= 0 else "red"
+          
           sp500 = f"${latest['sp500']:,.2f}"
+          sp500_change = latest['sp500_change']
+          sp500_pct = latest['sp500_pct']
+          sp500_arrow = "📈" if sp500_change >= 0 else "📉"
+          sp500_color = "green" if sp500_change >= 0 else "red"
+          
           gold = f"${latest['gold_usd']:,.2f}/oz"
+          gold_change = latest['gold_change']
+          gold_pct = latest['gold_pct']
+          gold_arrow = "📈" if gold_change >= 0 else "📉"
+          gold_color = "green" if gold_change >= 0 else "red"
+          
+          # グラフ用のデータ（最新30日分）
+          recent_df = df.tail(30)
+          
+          # 日経平均のグラフURL（QuickChart使用）
+          nikkei_values = ','.join([str(v) for v in recent_df['nikkei_225'].tolist()])
+          nikkei_labels = ','.join([str(d) for d in recent_df['date'].tolist()])
+          nikkei_chart_url = f"https://quickchart.io/chart?c={{type:'line',data:{{labels:[{nikkei_labels}],datasets:[{{label:'Nikkei 225',data:[{nikkei_values}],borderColor:'rgb(255,99,132)',fill:false}}]}},options:{{scales:{{y:{{beginAtZero:false}}}}}}}}"
+          
+          # S&P 500のグラフURL
+          sp500_values = ','.join([str(v) for v in recent_df['sp500'].tolist()])
+          sp500_chart_url = f"https://quickchart.io/chart?c={{type:'line',data:{{labels:[{nikkei_labels}],datasets:[{{label:'S&P 500',data:[{sp500_values}],borderColor:'rgb(54,162,235)',fill:false}}]}},options:{{scales:{{y:{{beginAtZero:false}}}}}}}}"
+          
+          # 金価格のグラフURL
+          gold_values = ','.join([str(v) for v in recent_df['gold_usd'].tolist()])
+          gold_chart_url = f"https://quickchart.io/chart?c={{type:'line',data:{{labels:[{nikkei_labels}],datasets:[{{label:'Gold',data:[{gold_values}],borderColor:'rgb(255,206,86)',fill:false}}]}},options:{{scales:{{y:{{beginAtZero:false}}}}}}}}"
           
           # README.mdを読み込み
           with open('README.md', 'r') as f:
               content = f.read()
           
           # マーケットデータセクションを更新
-          new_table = f"""
-          <!--START_MARKET_DATA-->
-          | Market | Price | Date |   
-          |--------|-------|------|
-          | 📈 **Nikkei 225** | {nikkei} | {date} |
-          | 🇺🇸 **S&P 500** | {sp500} | {date} |
-          | 🥇 **Gold** | {gold} | {date} |
-          <!--END_MARKET_DATA-->"""
+          new_table = f"""<!--START_MARKET_DATA-->
+| Market | Price | Change | Date |
+|--------|-------|--------|------|
+| 📈 **Nikkei 225** | {nikkei} | {nikkei_arrow} {nikkei_change:+.2f} ({nikkei_pct:+.2f}%) | {date} |
+| 🇺🇸 **S&P 500** | {sp500} | {sp500_arrow} {sp500_change:+.2f} ({sp500_pct:+.2f}%) | {date} |
+| 🥇 **Gold** | {gold} | {gold_arrow} {gold_change:+.2f} ({gold_pct:+.2f}%) | {date} |
+
+### 📊 30-Day Trends
+
+#### Nikkei 225
+![Nikkei Chart]({nikkei_chart_url})
+
+#### S&P 500
+![SP500 Chart]({sp500_chart_url})
+
+#### Gold
+![Gold Chart]({gold_chart_url})
+<!--END_MARKET_DATA-->"""
           
           # セクションを置換
           pattern = r'<!--START_MARKET_DATA-->.*?<!--END_MARKET_DATA-->'
@@ -83,6 +126,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "📊 Update market data: Nikkei, S&P 500, Gold"
+            git commit -m "📊 Update market data with charts"
             git push
           fi
