@@ -24,7 +24,7 @@ jobs:
         with:
           repository: Sora4431/market-data
           path: market-data
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}  # Privateリポジトリの場合はPATが必要
       
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -36,8 +36,9 @@ jobs:
       
       - name: Update README with market data
         run: |
-          python << 'EOF'
+          cat > update_readme.py << 'PYTHON_SCRIPT'
           import pandas as pd
+          import re
           
           # CSVから最新データを取得
           df = pd.read_csv('market-data/market_data.csv')
@@ -62,7 +63,6 @@ jobs:
 <!--END_MARKET_DATA-->"""
           
           # セクションを置換
-          import re
           pattern = r'<!--START_MARKET_DATA-->.*?<!--END_MARKET_DATA-->'
           content = re.sub(pattern, new_table, content, flags=re.DOTALL)
           
@@ -71,7 +71,9 @@ jobs:
               f.write(content)
           
           print(f"Updated market data for {date}")
-          EOF
+          PYTHON_SCRIPT
+          
+          python update_readme.py
       
       - name: Commit and push changes
         run: |
