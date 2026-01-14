@@ -24,7 +24,6 @@ jobs:
         with:
           repository: Sora4431/market-data
           path: market-data
-          token: ${{ secrets.PAT_TOKEN }}  # Privateリポジトリの場合はPATが必要
       
       - name: Set up Python
         uses: actions/setup-python@v5
