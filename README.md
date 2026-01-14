@@ -11,14 +11,6 @@
 | 🥇 **Gold** | $4,638.70/oz | 2026-01-14 |
 <!--END_MARKET_DATA-->
 
-## 📈 GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sora4431&show_icons=true&theme=dark&count_private=true)
-
-## 🏆 GitHub Trophies
-
-![Trophies](https://github-profile-trophy.vercel.app/?username=Sora4431&theme=darkhub&row=1&column=6)
-
 ## 📈 Activity Graph
 
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Sora4431&theme=github-dark)
