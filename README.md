@@ -11,7 +11,7 @@
 
 ### 📊 14-Day Market Trends (Indexed)
 
-![Market Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart.svg)
+![Market Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_gold.svg)
 
 <!--END_MARKET_DATA-->
 
