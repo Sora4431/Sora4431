@@ -9,7 +9,16 @@
 | 🇺🇸 **S&P 500** | $6,940.01 | 📈 +0.00 (+0.00%) | 2026-01-19 |
 | 🥇 **Gold** | ¥737,444.35/oz | 📈 +9742.51 (+1.34%) | 2026-01-19 |
 
-### 📊 14-Day Market Trends (Indexed)
+
+### 📊 14-Day Nikkei Trends (JPY)
+
+![Market Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_nikkei.svg)
+
+### 📊 14-Day S&P 500 Trends (USD)
+
+![Market Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_sp500.svg)
+
+### 📊 14-Day Gold Trends (JPY)
 
 ![Market Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_gold.svg)
 
