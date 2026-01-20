@@ -73,7 +73,9 @@ jobs:
 
           # マーケットデータセクションを更新
           # 生成されたSVGチャートへのリンクを使用
-          chart_url = "https://raw.githubusercontent.com/Sora4431/market-data/main/chart.svg"
+          chart_nikkei_url = "https://raw.githubusercontent.com/Sora4431/market-data/main/chart_nikkei.svg"
+          chart_sp500_url = "https://raw.githubusercontent.com/Sora4431/market-data/main/chart_sp500.svg"
+          chart_gold_url = "https://raw.githubusercontent.com/Sora4431/market-data/main/chart_gold.svg"
 
           new_section = f"""<!--START_MARKET_DATA-->
           | Market | Price | Change | Date |
@@ -84,7 +86,11 @@ jobs:
 
           ### 📊 14-Day Market Trends (Indexed)
 
-          ![Market Trends]({chart_url})
+          ![Nikkei 225 Trends]({chart_nikkei_url})
+
+          ![S&P 500 Trends]({chart_sp500_url})
+
+          ![Gold Trends]({chart_gold_url})
 
           <!--END_MARKET_DATA-->"""
 

@@ -11,7 +11,11 @@
 
 ### 📊 14-Day Market Trends (Indexed)
 
-![Market Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart.svg)
+![Nikkei 225 Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_nikkei.svg)
+
+![S&P 500 Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_sp500.svg)
+
+![Gold Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_gold.svg)
 
 <!--END_MARKET_DATA-->
 
