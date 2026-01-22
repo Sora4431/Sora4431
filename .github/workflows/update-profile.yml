@@ -2,7 +2,7 @@ name: Update Profile with Market Data
 
 on:
   schedule:
-    - cron: "0 8 * * *" # 17:00 JST
+    - cron: "0 1 * * *" # 10:00 JST (market-data更新の1時間後)
   workflow_dispatch:
 
 permissions:
@@ -31,13 +31,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install pandas matplotlib
-
-      - name: Generate market chart
-        run: |
-          cd market-data
-          python plot_market_chart.py
-          cd ..
+        run: pip install pandas
 
       - name: Update README with market data and charts
         run: |
