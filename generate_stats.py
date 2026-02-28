@@ -3,7 +3,7 @@ import requests
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 GH_TOKEN = os.environ.get('GH_TOKEN', '')
 USERNAME = 'Sora4431'
@@ -28,10 +28,10 @@ LANG_COLORS = {
     'C++':        '#f34b7d',
     'Swift':      '#F05138',
     'Kotlin':     '#A97BFF',
+    'Svelte':     '#ff3e00',
     'Vue':        '#41b883',
     'SCSS':       '#c6538c',
     'Dockerfile': '#384d54',
-    'MDX':        '#fcb32c',
 }
 
 
@@ -46,43 +46,71 @@ def gql(query):
 
 
 def fetch_all_stats():
-    """One GraphQL call to get both language data (all contributed repos)
-    and contribution counts."""
-    query = """
-    {
-      user(login: "%s") {
-        # --- contribution counts (already covers ALL repos) ---
-        contributionsCollection {
-          totalCommitContributions
-          totalPullRequestContributions
-          totalIssueContributions
-          # repos the user committed to this year (own + others, no forks)
-          commitContributionsByRepository(maxRepositories: 100) {
-            repository {
-              isFork
-              languages(first: 8, orderBy: {field: SIZE, direction: DESC}) {
-                edges {
-                  size
-                  node { name color }
+    """Fetch contributions for ENTIRE account history (from creation to now).
+    GitHub caps contributionsCollection at 1 year per query, so we chunk yearly.
+    """
+    # Step 1: get account creation date and repo count
+    meta = gql('{ user(login: "%s") { createdAt repositories(ownerAffiliations: OWNER, isFork: false) { totalCount } } }' % USERNAME)
+    created_at_str = meta['user']['createdAt']          # e.g. "2025-06-13T02:17:00Z"
+    repo_count     = meta['user']['repositories']['totalCount']
+
+    from_dt = datetime.fromisoformat(created_at_str.replace('Z', '+00:00'))
+    to_dt   = datetime.now(timezone.utc)
+
+    total_commits = 0
+    total_prs     = 0
+    total_issues  = 0
+    all_repo_contribs = []
+
+    # Step 2: iterate in ≤365-day chunks
+    chunk_start = from_dt
+    while chunk_start < to_dt:
+        chunk_end = min(chunk_start + timedelta(days=365), to_dt)
+
+        q = """
+        {
+          user(login: "%s") {
+            contributionsCollection(from: "%s", to: "%s") {
+              totalCommitContributions
+              totalPullRequestContributions
+              totalIssueContributions
+              commitContributionsByRepository(maxRepositories: 100) {
+                repository {
+                  isFork
+                  languages(first: 8, orderBy: {field: SIZE, direction: DESC}) {
+                    edges { size node { name color } }
+                  }
                 }
               }
             }
           }
         }
-        repositories(ownerAffiliations: OWNER, isFork: false) { totalCount }
-        followers { totalCount }
-      }
+        """ % (USERNAME,
+               chunk_start.strftime('%Y-%m-%dT%H:%M:%SZ'),
+               chunk_end.strftime('%Y-%m-%dT%H:%M:%SZ'))
+
+        cc = gql(q).get('user', {}).get('contributionsCollection', {})
+        total_commits += cc.get('totalCommitContributions', 0)
+        total_prs     += cc.get('totalPullRequestContributions', 0)
+        total_issues  += cc.get('totalIssueContributions', 0)
+        all_repo_contribs.extend(cc.get('commitContributionsByRepository', []))
+
+        chunk_start = chunk_end
+
+    print(f'All-time totals — Commits: {total_commits}, PRs: {total_prs}, Issues: {total_issues}')
+    return {
+        'commits':       total_commits,
+        'prs':           total_prs,
+        'issues':        total_issues,
+        'repos':         repo_count,
+        'repo_contribs': all_repo_contribs,
+        'since':         from_dt.strftime('%Y-%m-%d'),
     }
-    """ % USERNAME
-    return gql(query).get('user', {})
 
 
-def build_language_totals(user_data):
-    """Aggregate language bytes from all repos the user committed to this year."""
+def build_language_totals(repo_contribs):
     lang_totals = {}
-    for contrib in (user_data
-                    .get('contributionsCollection', {})
-                    .get('commitContributionsByRepository', [])):
+    for contrib in repo_contribs:
         repo = contrib.get('repository', {})
         if repo.get('isFork'):
             continue
@@ -117,8 +145,7 @@ def generate_language_chart(lang_totals, filename='stats_languages.svg'):
     ax.set_yticklabels(names, fontsize=10.5, color='#24292e')
     ax.invert_yaxis()
     ax.set_xlim(0, max(pcts) * 1.3)
-    ax.set_title('Top Languages (all contributed repos)', fontsize=12,
-                 fontweight='bold', color='#24292e', pad=10)
+    ax.set_title('Top Languages', fontsize=13, fontweight='bold', color='#24292e', pad=10)
 
     for i, pct in enumerate(pcts):
         ax.text(pct + 0.5, i, f'{pct:.1f}%', va='center', ha='left',
@@ -136,28 +163,21 @@ def generate_language_chart(lang_totals, filename='stats_languages.svg'):
     print(f'Saved {filename}')
 
 
-def generate_stats_card(user_data, filename='stats_overview.svg'):
-    cc      = user_data.get('contributionsCollection', {})
-    commits = cc.get('totalCommitContributions', 0)
-    prs     = cc.get('totalPullRequestContributions', 0)
-    issues  = cc.get('totalIssueContributions', 0)
-    repos   = user_data.get('repositories', {}).get('totalCount', 0)
-    year    = datetime.now().year
-
+def generate_stats_card(stats, filename='stats_overview.svg'):
     fig, ax = plt.subplots(figsize=(5.2, 3.4))
     fig.patch.set_facecolor('white')
     ax.set_facecolor('white')
     ax.axis('off')
-    ax.set_title(f'GitHub Stats ({year})', fontsize=13, fontweight='bold',
-                 color='#24292e', pad=12)
+    ax.set_title(f'GitHub Stats (since {stats["since"]})',
+                 fontsize=12, fontweight='bold', color='#24292e', pad=12)
 
-    stats = [
-        ('Commits',       commits, '#0366d6'),
-        ('Pull Requests', prs,     '#28a745'),
-        ('Issues',        issues,  '#e36209'),
-        ('Repositories',  repos,   '#6f42c1'),
+    items = [
+        ('Commits',       stats['commits'], '#0366d6'),
+        ('Pull Requests', stats['prs'],     '#28a745'),
+        ('Issues',        stats['issues'],  '#e36209'),
+        ('Repositories',  stats['repos'],   '#6f42c1'),
     ]
-    for i, (label, value, color) in enumerate(stats):
+    for i, (label, value, color) in enumerate(items):
         x = (i % 2) * 0.5 + 0.2
         y = 0.68 - (i // 2) * 0.42
         ax.text(x, y,        str(value), transform=ax.transAxes,
@@ -175,15 +195,11 @@ def generate_stats_card(user_data, filename='stats_overview.svg'):
 
 
 def main():
-    print('Fetching all stats via GraphQL...')
-    user_data = fetch_all_stats()
-
-    lang_totals = build_language_totals(user_data)
-    print(f'Languages found: {list(lang_totals.keys())}')
+    stats = fetch_all_stats()
+    lang_totals = build_language_totals(stats['repo_contribs'])
+    print(f'Languages: {list(lang_totals.keys())}')
     generate_language_chart(lang_totals)
-
-    print(f'Contributions: {user_data.get("contributionsCollection", {})}')
-    generate_stats_card(user_data)
+    generate_stats_card(stats)
 
 
 if __name__ == '__main__':
