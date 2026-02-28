@@ -1,5 +1,18 @@
 # Hi there 👋 I'm Sora4431
 
+## 🛠️ GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Sora4431&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github" height="160" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sora4431&layout=compact&hide_border=true&langs_count=6" height="160" alt="Top Languages" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=Sora4431&hide_border=true" alt="GitHub Streak" />
+</p>
+
+---
+
 ## 📊 Daily Market Watch
 
 <!--START_MARKET_DATA-->
