@@ -151,8 +151,8 @@ def generate_stats_card(user_data, filename='stats_overview.svg'):
                 va='center', ha='center')
 
     # subtle divider line
-    ax.axhline(y=0.42, xmin=0.05, xmax=0.95,
-               color='#e1e4e8', linewidth=0.8, transform=ax.transAxes)
+    ax.plot([0.05, 0.95], [0.42, 0.42],
+             transform=ax.transAxes, color='#e1e4e8', linewidth=0.8)
 
     plt.tight_layout(pad=1.2)
     plt.savefig(filename, format='svg', bbox_inches='tight', facecolor='white')
