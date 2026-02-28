@@ -3,8 +3,8 @@
 ## 🛠️ GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Sora4431&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github" height="160" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sora4431&layout=compact&hide_border=true&langs_count=6" height="160" alt="Top Languages" />
+  <img src="stats_overview.svg" height="170" alt="GitHub Stats" />
+  <img src="stats_languages.svg" height="170" alt="Top Languages" />
 </p>
 
 <p align="center">
