@@ -5,20 +5,20 @@
 <!--START_MARKET_DATA-->
 | Market | Price | Change | Date |
 |--------|-------|--------|------|
-| 📈 **Nikkei 225** | ¥58,850.27 | 📈 +0.00 (+0.00%) | 2026-02-28 |
-| 🇺🇸 **S&P 500** | $6,878.88 | 📈 +0.00 (+0.00%) | 2026-02-28 |
-| 🥇 **Gold** | ¥825,491.56/oz | 📈 +0.00 (+0.00%) | 2026-02-28 |
+| 🇺🇸 **S&P 500** | $6,878.88 | 📉 -29.98 (-0.43%) | 2026-02-27 |
+| 🛢️ **WTI Crude** | $67.02/bbl | 📈 +1.81 (+2.78%) | 2026-02-27 |
+| 🏦 **US 10Y Yield** | 3.9620% | 📉 -0.0550 (-1.37%) | 2026-02-27 |
 
-### 📊 14-Day Market Trends (Indexed)
+### 📊 14-Day Market Trends
 
-![Nikkei 225 Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_nikkei.svg)
+![S&P 500](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_sp500.svg)
 
-![S&P 500 Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_sp500.svg)
+![WTI Crude Oil](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_wti.svg)
 
-![Gold Trends](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_gold.svg)
+![US 10-Year Treasury Yield](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_us10y.svg)
 
 <!--END_MARKET_DATA-->
 
 ---
 
-_Market data auto-updated daily at 17:00 JST_
+_Market data auto-updated daily after US market close_
