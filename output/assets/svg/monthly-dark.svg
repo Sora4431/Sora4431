@@ -9,43 +9,26 @@
 <text x="44" y="81.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="8" font-weight="normal" fill="#8b949e" text-anchor="end">129</text>
 <line x1="48" y1="48.0" x2="976" y2="48.0" stroke="#484f58" stroke-width="0.6" opacity="0.4"/>
 <text x="44" y="52.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="8" font-weight="normal" fill="#8b949e" text-anchor="end">172</text>
-<polygon points="48,164 48.00,164.00 102.59,164.00 157.18,164.00 211.76,164.00 266.35,164.00 320.94,164.00 375.53,164.00 430.12,164.00 484.71,163.33 539.29,164.00 593.88,150.51 648.47,105.33 703.06,112.07 757.65,155.23 812.24,116.12 866.82,116.12 921.41,48.00 976.00,151.86 976,164" fill="#58a6ff33"/>
-<path d="M 48.00,164.00 C 75.29,164.00 75.29,164.00 102.59,164.00 C 129.88,164.00 129.88,164.00 157.18,164.00 C 184.47,164.00 184.47,164.00 211.76,164.00 C 239.06,164.00 239.06,164.00 266.35,164.00 C 293.65,164.00 293.65,164.00 320.94,164.00 C 348.24,164.00 348.24,164.00 375.53,164.00 C 402.82,164.00 402.82,164.00 430.12,164.00 C 457.41,164.00 457.41,163.33 484.71,163.33 C 512.00,163.33 512.00,164.00 539.29,164.00 C 566.59,164.00 566.59,150.51 593.88,150.51 C 621.18,150.51 621.18,105.33 648.47,105.33 C 675.76,105.33 675.76,112.07 703.06,112.07 C 730.35,112.07 730.35,155.23 757.65,155.23 C 784.94,155.23 784.94,116.12 812.24,116.12 C 839.53,116.12 839.53,116.12 866.82,116.12 C 894.12,116.12 894.12,48.00 921.41,48.00 C 948.71,48.00 948.71,151.86 976.00,151.86" fill="none" stroke="#58a6ff" stroke-width="2.0"/>
-<circle cx="48.0" cy="164.0" r="3" fill="#58a6ff"/>
-<circle cx="102.58823529411765" cy="164.0" r="3" fill="#58a6ff"/>
-<circle cx="157.1764705882353" cy="164.0" r="3" fill="#58a6ff"/>
-<circle cx="211.76470588235293" cy="164.0" r="3" fill="#58a6ff"/>
-<circle cx="266.3529411764706" cy="164.0" r="3" fill="#58a6ff"/>
-<circle cx="320.94117647058823" cy="164.0" r="3" fill="#58a6ff"/>
-<circle cx="375.52941176470586" cy="164.0" r="3" fill="#58a6ff"/>
-<circle cx="430.11764705882354" cy="164.0" r="3" fill="#58a6ff"/>
-<circle cx="484.70588235294116" cy="163.32558139534885" r="3" fill="#58a6ff"/>
-<circle cx="539.2941176470588" cy="164.0" r="3" fill="#58a6ff"/>
-<circle cx="593.8823529411765" cy="150.51162790697674" r="3" fill="#58a6ff"/>
-<circle cx="648.4705882352941" cy="105.32558139534883" r="3" fill="#58a6ff"/>
-<circle cx="703.0588235294117" cy="112.06976744186046" r="3" fill="#58a6ff"/>
-<circle cx="757.6470588235294" cy="155.2325581395349" r="3" fill="#58a6ff"/>
-<circle cx="812.2352941176471" cy="116.11627906976744" r="3" fill="#58a6ff"/>
-<circle cx="866.8235294117648" cy="116.11627906976744" r="3" fill="#58a6ff"/>
-<circle cx="921.4117647058823" cy="48.0" r="3" fill="#58a6ff"/>
-<circle cx="976.0" cy="151.86046511627907" r="3" fill="#58a6ff"/>
-<text x="48.0" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Oct</text>
-<text x="102.58823529411765" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Nov</text>
-<text x="157.1764705882353" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Dec</text>
-<text x="211.76470588235293" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Jan</text>
-<text x="266.3529411764706" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Feb</text>
-<text x="320.94117647058823" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Mar</text>
-<text x="375.52941176470586" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Apr</text>
-<text x="430.11764705882354" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">May</text>
-<text x="484.70588235294116" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Jun</text>
-<text x="539.2941176470588" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Jul</text>
-<text x="593.8823529411765" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Aug</text>
-<text x="648.4705882352941" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Sep</text>
-<text x="703.0588235294117" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Oct</text>
-<text x="757.6470588235294" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Nov</text>
-<text x="812.2352941176471" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Dec</text>
-<text x="866.8235294117648" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Dec</text>
-<text x="921.4117647058823" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Jan</text>
+<polygon points="48,164 48.00,163.33 151.11,164.00 254.22,150.51 357.33,105.33 460.44,112.07 563.56,155.23 666.67,116.12 769.78,48.00 872.89,79.70 976.00,150.51 976,164" fill="#58a6ff33"/>
+<path d="M 48.00,163.33 C 99.56,163.33 99.56,164.00 151.11,164.00 C 202.67,164.00 202.67,150.51 254.22,150.51 C 305.78,150.51 305.78,105.33 357.33,105.33 C 408.89,105.33 408.89,112.07 460.44,112.07 C 512.00,112.07 512.00,155.23 563.56,155.23 C 615.11,155.23 615.11,116.12 666.67,116.12 C 718.22,116.12 718.22,48.00 769.78,48.00 C 821.33,48.00 821.33,79.70 872.89,79.70 C 924.44,79.70 924.44,150.51 976.00,150.51" fill="none" stroke="#58a6ff" stroke-width="2.0"/>
+<circle cx="48.0" cy="163.32558139534885" r="3" fill="#58a6ff"/>
+<circle cx="151.11111111111111" cy="164.0" r="3" fill="#58a6ff"/>
+<circle cx="254.22222222222223" cy="150.51162790697674" r="3" fill="#58a6ff"/>
+<circle cx="357.3333333333333" cy="105.32558139534883" r="3" fill="#58a6ff"/>
+<circle cx="460.44444444444446" cy="112.06976744186046" r="3" fill="#58a6ff"/>
+<circle cx="563.5555555555555" cy="155.2325581395349" r="3" fill="#58a6ff"/>
+<circle cx="666.6666666666666" cy="116.11627906976744" r="3" fill="#58a6ff"/>
+<circle cx="769.7777777777778" cy="48.0" r="3" fill="#58a6ff"/>
+<circle cx="872.8888888888889" cy="79.69767441860466" r="3" fill="#58a6ff"/>
+<circle cx="976.0" cy="150.51162790697674" r="3" fill="#58a6ff"/>
+<text x="48.0" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Jun</text>
+<text x="151.11111111111111" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Jul</text>
+<text x="254.22222222222223" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Aug</text>
+<text x="357.3333333333333" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Sep</text>
+<text x="460.44444444444446" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Oct</text>
+<text x="563.5555555555555" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Nov</text>
+<text x="666.6666666666666" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Dec</text>
+<text x="769.7777777777778" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Jan</text>
+<text x="872.8888888888889" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Feb</text>
 <text x="976.0" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Mar</text>
 <line x1="48" y1="164" x2="976" y2="164" stroke="#484f58" stroke-width="0.8" opacity="0.6"/>
-</svg>
