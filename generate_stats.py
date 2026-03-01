@@ -456,24 +456,26 @@ def pentagon_point(cx, cy, radius, axis_index, n_axes=5):
 
 
 def make_activity_svg(theme, totals, repo_count):
-    W, H = 495, 195
+    # H=240 to give enough room for bottom vertex labels (cy=130, max_r=78 → bottom label ~y=220)
+    W, H = 495, 240
     svg = svg_open(W, H, theme)
 
-    svg += svg_text(20, 35, "Activity Radar", size=15, weight="600", fill=theme["text"])
+    svg += svg_text(20, 28, "Activity Radar", size=14, weight="600", fill=theme["text"])
 
-    # Axes: Commits, PRs, Reviews, Issues, Repos Contributed
+    # Benchmarks tuned so a typical active user fills 50-80% of each axis.
+    # Previous Commits=10000/Reviews=200 made values <5% → chart looked flat/broken.
     axes = [
-        ("Commits",    totals["commits"],  10000),
-        ("PRs",        totals["prs"],      200),
-        ("Reviews",    totals["reviews"],  200),
-        ("Issues",     totals["issues"],   100),
-        ("Repos",      repo_count,         50),
+        ("Commits",  totals["commits"],  600),
+        ("PRs",      totals["prs"],      120),
+        ("Reviews",  totals["reviews"],  15),
+        ("Issues",   totals["issues"],   100),
+        ("Repos",    repo_count,         12),
     ]
 
     n = len(axes)
     cx = 150.0
-    cy = 115.0
-    max_r = 72.0
+    cy = 128.0   # centered in available area (title=28, bottom label≈220, mid=124)
+    max_r = 78.0
 
     # Draw grid rings at 25%, 50%, 75%, 100%
     for frac in (0.25, 0.50, 0.75, 1.0):
@@ -486,11 +488,11 @@ def make_activity_svg(theme, totals, repo_count):
         ox, oy = pentagon_point(cx, cy, max_r, i, n)
         svg += svg_line(cx, cy, ox, oy, stroke=theme["axis"], sw=0.8, opacity=0.5)
 
-    # Compute normalized values
+    # Compute normalized values; clamp [0.08, 1.0] so no axis is invisible
     norm = []
     raw_vals = []
     for label, value, benchmark in axes:
-        v = min(value / benchmark, 1.0) if benchmark else 0
+        v = max(min(value / benchmark, 1.0), 0.08) if benchmark else 0.08
         norm.append(v)
         raw_vals.append(value)
 
@@ -503,16 +505,17 @@ def make_activity_svg(theme, totals, repo_count):
     for x, y in data_pts:
         svg += svg_circle(x, y, 3.5, theme["accent"])
 
-    # Axis labels (pushed slightly outside max ring)
+    # Axis labels outside max ring.
+    # Top vertex (i=0): offset y>0 so label stays below the title text.
     label_offsets = [
-        (0, 12),      # top: Commits
+        (0, 14),      # top: Commits  → push down inside card
         (10, 4),      # upper-right: PRs
         (6, 14),      # lower-right: Reviews
         (-6, 14),     # lower-left: Issues
         (-10, 4),     # upper-left: Repos
     ]
     for i, (label, value, _) in enumerate(axes):
-        lx, ly = pentagon_point(cx, cy, max_r + 16, i, n)
+        lx, ly = pentagon_point(cx, cy, max_r + 14, i, n)
         lx += label_offsets[i][0]
         ly += label_offsets[i][1]
         anchor = "middle"
@@ -526,8 +529,8 @@ def make_activity_svg(theme, totals, repo_count):
 
     # Right side: stat breakdown panel
     panel_x = 285
-    panel_y = 50
-    row_h = 24
+    panel_y = 44
+    row_h = 28
 
     stat_rows = [
         ("Commits",  fmt_num(totals["commits"]),  theme["commits"]),
@@ -539,9 +542,9 @@ def make_activity_svg(theme, totals, repo_count):
     for i, (lbl, val, color) in enumerate(stat_rows):
         ry = panel_y + i * row_h
         svg += svg_rect(panel_x, ry, 190, row_h - 2, fill=theme["grid"], rx=3)
-        svg += svg_text(panel_x + 10, ry + 14, lbl,
+        svg += svg_text(panel_x + 10, ry + 17, lbl,
                         size=10, fill=theme["muted"])
-        svg += svg_text(panel_x + 190 - 10, ry + 14, val,
+        svg += svg_text(panel_x + 190 - 10, ry + 17, val,
                         size=11, weight="700", fill=color, anchor="end")
 
     svg += svg_close()
