@@ -1,10 +1,16 @@
 # Hi there 👋 I'm Sora4431
 
-## 🛠️ GitHub Stats
-
 <p align="center">
-  <img src="stats_overview.svg" height="170" alt="GitHub Stats" />
-  <img src="stats_languages.svg" height="170" alt="Top Languages" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/overview-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/overview-light.svg">
+    <img src="./output/assets/svg/overview-dark.svg" alt="GitHub Stats" width="400" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/languages-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/languages-light.svg">
+    <img src="./output/assets/svg/languages-dark.svg" alt="Top Languages" width="400" />
+  </picture>
 </p>
 
 <p align="center">
@@ -34,4 +40,6 @@
 
 ---
 
-_Market data auto-updated daily after US market close_
+<div align="center">
+  <sub>Stats auto-updated weekly via <a href="https://github.com/Sora4431/Sora4431/actions">GitHub Actions</a> · Market data updated daily after US market close</sub>
+</div>
