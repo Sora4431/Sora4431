@@ -612,8 +612,8 @@ def make_monthly_svg(theme, monthly, account_created=None):
     for x, y in coords:
         area_pts.append(f"{x:.2f},{y:.2f}")
     area_pts.append(f"{chart_r},{chart_b}")
-    svg += f'<polygon points="{" ".join(area_pts)}" fill="{theme["area_fill"]}"/>
-'
+    pts_str = " ".join(area_pts)
+    svg += f'<polygon points="{pts_str}" fill="{theme["area_fill"]}"/>\n'
 
     # Smooth line using cubic bezier
     d_parts = [f"M {coords[0][0]:.2f},{coords[0][1]:.2f}"]
