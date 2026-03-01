@@ -472,7 +472,7 @@ def make_activity_svg(theme, totals, repo_count):
 
     n = len(axes)
     cx = 150.0
-    cy = 108.0
+    cy = 115.0
     max_r = 72.0
 
     # Draw grid rings at 25%, 50%, 75%, 100%
@@ -505,7 +505,7 @@ def make_activity_svg(theme, totals, repo_count):
 
     # Axis labels (pushed slightly outside max ring)
     label_offsets = [
-        (0, -10),     # top: Commits
+        (0, 12),      # top: Commits
         (10, 4),      # upper-right: PRs
         (6, 14),      # lower-right: Reviews
         (-6, 14),     # lower-left: Issues
