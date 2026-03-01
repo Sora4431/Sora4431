@@ -1,44 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195">
-<rect width="495" height="195" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-<text x="20" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#e6edf3" text-anchor="start">Activity Radar</text>
-<polygon points="150.00,97.00 167.12,109.44 160.58,129.56 139.42,129.56 132.88,109.44" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
-<polygon points="150.00,79.00 184.24,103.88 171.16,144.12 128.84,144.12 115.76,103.88" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
-<polygon points="150.00,61.00 201.36,98.31 181.74,158.69 118.26,158.69 98.64,98.31" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
-<polygon points="150.00,43.00 218.48,92.75 192.32,173.25 107.68,173.25 81.52,92.75" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
-<line x1="150.0" y1="115.0" x2="150.0" y2="43.0" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
-<line x1="150.0" y1="115.0" x2="218.47606917325106" y2="92.75077640500379" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
-<line x1="150.0" y1="115.0" x2="192.32053816505805" y2="173.2492235949962" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
-<line x1="150.0" y1="115.0" x2="107.67946183494195" y2="173.2492235949962" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
-<line x1="150.0" y1="115.0" x2="81.52393082674894" y2="92.75077640500379" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
-<polygon points="150.00,112.12 182.53,104.43 150.63,115.87 119.53,156.94 140.41,111.89" fill="#58a6ff33" stroke="#58a6ff" stroke-width="2.0"/>
-<circle cx="150.0" cy="112.12" r="3.5" fill="#58a6ff"/>
-<circle cx="182.52613285729424" cy="104.4316187923768" r="3.5" fill="#58a6ff"/>
-<circle cx="150.63480807247586" cy="115.87373835392495" r="3.5" fill="#58a6ff"/>
-<circle cx="119.5292125211582" cy="156.93944098839728" r="3.5" fill="#58a6ff"/>
-<circle cx="140.41335031574485" cy="111.88510869670053" r="3.5" fill="#58a6ff"/>
-<text x="150.0" y="39.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Commits</text>
-<text x="150.0" y="50.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="middle">400</text>
-<text x="243.69297343397352" y="91.80650449500463" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="start">PRs</text>
-<text x="243.69297343397352" y="102.80650449500463" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="start">95</text>
-<text x="207.72510220173763" y="200.19349550499538" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="start">Reviews</text>
-<text x="207.72510220173763" y="211.19349550499538" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="start">3</text>
-<text x="92.27489779826237" y="200.19349550499538" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="end">Issues</text>
-<text x="92.27489779826237" y="211.19349550499538" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="end">72</text>
-<text x="56.30702656602648" y="91.80650449500465" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="end">Repos</text>
-<text x="56.30702656602648" y="102.80650449500465" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="end">7</text>
-<rect x="285" y="50" width="190" height="22" rx="3" fill="#21262d"/>
-<text x="295" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">Commits</text>
-<text x="465" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#58a6ff" text-anchor="end">400</text>
-<rect x="285" y="74" width="190" height="22" rx="3" fill="#21262d"/>
-<text x="295" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">PRs</text>
-<text x="465" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#3fb950" text-anchor="end">95</text>
-<rect x="285" y="98" width="190" height="22" rx="3" fill="#21262d"/>
-<text x="295" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">Reviews</text>
-<text x="465" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#a371f7" text-anchor="end">3</text>
-<rect x="285" y="122" width="190" height="22" rx="3" fill="#21262d"/>
-<text x="295" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">Issues</text>
-<text x="465" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#f78166" text-anchor="end">72</text>
-<rect x="285" y="146" width="190" height="22" rx="3" fill="#21262d"/>
-<text x="295" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">Repos</text>
-<text x="465" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="end">7</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="240" viewBox="0 0 495 240">
+<rect width="495" height="240" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+<text x="20" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#e6edf3" text-anchor="start">Activity Radar</text>
+<polygon points="150.00,108.50 168.55,121.97 161.46,143.78 138.54,143.78 131.45,121.97" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
+<polygon points="150.00,89.00 187.09,115.95 172.92,159.55 127.08,159.55 112.91,115.95" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
+<polygon points="150.00,69.50 205.64,109.92 184.39,175.33 115.61,175.33 94.36,109.92" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
+<polygon points="150.00,50.00 224.18,103.90 195.85,191.10 104.15,191.10 75.82,103.90" fill="none" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
+<line x1="150.0" y1="128.0" x2="150.0" y2="50.0" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
+<line x1="150.0" y1="128.0" x2="224.18240827102198" y2="103.8966744387541" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
+<line x1="150.0" y1="128.0" x2="195.84724967881291" y2="191.1033255612459" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
+<line x1="150.0" y1="128.0" x2="104.15275032118711" y2="191.1033255612459" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
+<line x1="150.0" y1="128.0" x2="75.81759172897802" y2="103.8966744387541" stroke="#484f58" stroke-width="0.8" opacity="0.5"/>
+<polygon points="150.00,75.87 208.73,108.92 159.17,140.62 116.99,173.43 106.73,113.94" fill="#58a6ff33" stroke="#58a6ff" stroke-width="2.0"/>
+<circle cx="150.0" cy="75.87" r="3.5" fill="#58a6ff"/>
+<circle cx="208.72773988122572" cy="108.918200597347" r="3.5" fill="#58a6ff"/>
+<circle cx="159.16944993576257" cy="140.62066511224918" r="3.5" fill="#58a6ff"/>
+<circle cx="116.98998023125472" cy="173.43439440409705" r="3.5" fill="#58a6ff"/>
+<circle cx="106.72692850857051" cy="113.9397267559399" r="3.5" fill="#58a6ff"/>
+<text x="150.0" y="50.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="middle">Commits</text>
+<text x="150.0" y="61.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="middle">401</text>
+<text x="247.49719949915414" y="103.57043651750485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="start">PRs</text>
+<text x="247.49719949915414" y="114.57043651750485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="start">95</text>
+<text x="210.07624321090753" y="216.42956348249515" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="start">Reviews</text>
+<text x="210.07624321090753" y="227.42956348249515" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="start">3</text>
+<text x="89.92375678909248" y="216.42956348249515" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="end">Issues</text>
+<text x="89.92375678909248" y="227.42956348249515" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="end">72</text>
+<text x="52.502800500845865" y="103.57043651750485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#8b949e" text-anchor="end">Repos</text>
+<text x="52.502800500845865" y="114.57043651750485" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="600" fill="#58a6ff" text-anchor="end">7</text>
+<rect x="285" y="44" width="190" height="26" rx="3" fill="#21262d"/>
+<text x="295" y="61" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">Commits</text>
+<text x="465" y="61" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#58a6ff" text-anchor="end">401</text>
+<rect x="285" y="72" width="190" height="26" rx="3" fill="#21262d"/>
+<text x="295" y="89" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">PRs</text>
+<text x="465" y="89" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#3fb950" text-anchor="end">95</text>
+<rect x="285" y="100" width="190" height="26" rx="3" fill="#21262d"/>
+<text x="295" y="117" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">Reviews</text>
+<text x="465" y="117" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#a371f7" text-anchor="end">3</text>
+<rect x="285" y="128" width="190" height="26" rx="3" fill="#21262d"/>
+<text x="295" y="145" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">Issues</text>
+<text x="465" y="145" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#f78166" text-anchor="end">72</text>
+<rect x="285" y="156" width="190" height="26" rx="3" fill="#21262d"/>
+<text x="295" y="173" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="normal" fill="#8b949e" text-anchor="start">Repos</text>
+<text x="465" y="173" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="end">7</text>
 </svg>
