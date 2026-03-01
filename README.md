@@ -1,45 +1,25 @@
 # Hi there 👋 I'm Sora4431
 
-## 📊 GitHub Stats
-
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-stats.vercel.app/api?username=Sora4431&show_icons=true&theme=github_dark&hide_border=true&count_private=true">
-    <source media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-stats.vercel.app/api?username=Sora4431&show_icons=true&theme=default&hide_border=true&count_private=true">
-    <img src="https://github-readme-stats.vercel.app/api?username=Sora4431&show_icons=true&theme=github_dark&hide_border=true&count_private=true"
-         height="180" alt="GitHub Stats" />
+    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/activity-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/activity-light.svg">
+    <img src="./output/assets/svg/activity-dark.svg" alt="Activity Radar" width="400" />
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Sora4431&layout=compact&theme=github_dark&hide_border=true&count_private=true">
-    <source media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Sora4431&layout=compact&theme=default&hide_border=true&count_private=true">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sora4431&layout=compact&theme=github_dark&hide_border=true&count_private=true"
-         height="180" alt="Top Languages" />
+    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/overview-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/overview-light.svg">
+    <img src="./output/assets/svg/overview-dark.svg" alt="GitHub Stats" width="400" />
   </picture>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Sora4431&hide_border=true&theme=dark"
-       alt="GitHub Streak" />
-</p>
-
-## 🏆 Trophy
-
-<p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)"
-      srcset="https://github-profile-trophy.vercel.app/?username=Sora4431&theme=darkhub&no-frame=true&margin-w=4&column=6">
-    <source media="(prefers-color-scheme: light)"
-      srcset="https://github-profile-trophy.vercel.app/?username=Sora4431&theme=flat&no-frame=true&margin-w=4&column=6">
-    <img src="https://github-profile-trophy.vercel.app/?username=Sora4431&theme=darkhub&no-frame=true&margin-w=4&column=6"
-         alt="Trophy" />
+    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/charts-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/charts-light.svg">
+    <img src="./output/assets/svg/charts-dark.svg" alt="Top Languages" width="820" />
   </picture>
 </p>
-
-## 📈 Contribution Graph
 
 <p align="center">
   <picture>
@@ -50,6 +30,10 @@
     <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sora4431&theme=github-compact&hide_border=true&area=true"
          alt="Contribution Graph" width="820" />
   </picture>
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=Sora4431&hide_border=true&theme=dark" alt="GitHub Streak" />
 </p>
 
 ---
@@ -76,6 +60,6 @@
 ---
 
 <div align="center">
-  <sub>Market data updated daily after US market close</sub>
+  <sub>Stats updated weekly · Market data updated daily after US market close</sub>
 </div>
 
