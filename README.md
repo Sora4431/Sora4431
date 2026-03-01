@@ -4,12 +4,12 @@
   <picture>
     <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/activity-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/activity-light.svg">
-    <img src="./output/assets/svg/activity-dark.svg" alt="Activity Radar" width="495" />
+    <img src="./output/assets/svg/activity-dark.svg" alt="Activity Radar" width="400" />
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/overview-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/overview-light.svg">
-    <img src="./output/assets/svg/overview-dark.svg" alt="GitHub Stats" width="495" />
+    <img src="./output/assets/svg/overview-dark.svg" alt="GitHub Stats" width="400" />
   </picture>
 </p>
 
@@ -17,7 +17,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/charts-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/charts-light.svg">
-    <img src="./output/assets/svg/charts-dark.svg" alt="Top Languages" width="495" />
+    <img src="./output/assets/svg/charts-dark.svg" alt="Top Languages" width="820" />
   </picture>
 </p>
 
@@ -25,7 +25,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/monthly-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/monthly-light.svg">
-    <img src="./output/assets/svg/monthly-dark.svg" alt="Monthly Contributions" width="1000" />
+    <img src="./output/assets/svg/monthly-dark.svg" alt="Monthly Contributions" width="820" />
   </picture>
 </p>
 
