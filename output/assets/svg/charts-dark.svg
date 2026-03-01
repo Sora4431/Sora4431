@@ -3,13 +3,13 @@
 <text x="20" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#e6edf3" text-anchor="start">Top Languages</text>
 <defs><clipPath id="bar-clip"><rect x="20" y="50" width="455" height="10" rx="5"/></clipPath></defs>
 <g clip-path="url(#bar-clip)">
-<rect x="20" y="50" width="301.1137596102658" height="10" rx="0" fill="#3572A5"/>
-<rect x="321.1137596102658" y="50" width="124.04240138313138" height="10" rx="0" fill="#3178c6"/>
-<rect x="445.1561609933972" y="50" width="15.394556599805536" height="10" rx="0" fill="#ff3e00"/>
-<rect x="460.5507175932027" y="50" width="6.313510480172715" height="10" rx="0" fill="#663399"/>
-<rect x="466.86422807337544" y="50" width="3.345102745123983" height="10" rx="0" fill="#f1e05a"/>
-<rect x="470.20933081849944" y="50" width="2.71900617501091" height="10" rx="0" fill="#c6538c"/>
-<rect x="472.92833699351036" y="50" width="2.0716630064896675" height="10" rx="0" fill="#844FBA"/>
+<rect x="20" y="50" width="301.1139664615755" height="10" rx="0" fill="#3572A5"/>
+<rect x="321.1139664615755" y="50" width="124.04223464741081" height="10" rx="0" fill="#3178c6"/>
+<rect x="445.1562011089863" y="50" width="15.39453590670012" height="10" rx="0" fill="#ff3e00"/>
+<rect x="460.5507370156864" y="50" width="6.3135019936575585" height="10" rx="0" fill="#663399"/>
+<rect x="466.864239009344" y="50" width="3.3450982486928402" height="10" rx="0" fill="#f1e05a"/>
+<rect x="470.20933725803684" y="50" width="2.719002520168301" height="10" rx="0" fill="#c6538c"/>
+<rect x="472.92833977820516" y="50" width="2.071660221794915" height="10" rx="0" fill="#844FBA"/>
 </g>
 <circle cx="25.0" cy="75" r="5" fill="#3572A5"/>
 <text x="36.0" y="79" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="normal" fill="#e6edf3" text-anchor="start">Python</text>

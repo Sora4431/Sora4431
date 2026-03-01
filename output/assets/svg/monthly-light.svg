@@ -9,8 +9,8 @@
 <text x="44" y="81.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="8" font-weight="normal" fill="#656d76" text-anchor="end">129</text>
 <line x1="48" y1="48.0" x2="976" y2="48.0" stroke="#8c959f" stroke-width="0.6" opacity="0.4"/>
 <text x="44" y="52.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="8" font-weight="normal" fill="#656d76" text-anchor="end">172</text>
-<polygon points="48,164 48.00,163.33 151.11,164.00 254.22,150.51 357.33,105.33 460.44,112.07 563.56,155.23 666.67,116.12 769.78,48.00 872.89,79.70 976.00,150.51 976,164" fill="#0969da22"/>
-<path d="M 48.00,163.33 C 99.56,163.33 99.56,164.00 151.11,164.00 C 202.67,164.00 202.67,150.51 254.22,150.51 C 305.78,150.51 305.78,105.33 357.33,105.33 C 408.89,105.33 408.89,112.07 460.44,112.07 C 512.00,112.07 512.00,155.23 563.56,155.23 C 615.11,155.23 615.11,116.12 666.67,116.12 C 718.22,116.12 718.22,48.00 769.78,48.00 C 821.33,48.00 821.33,79.70 872.89,79.70 C 924.44,79.70 924.44,150.51 976.00,150.51" fill="none" stroke="#0969da" stroke-width="2.0"/>
+<polygon points="48,164 48.00,163.33 151.11,164.00 254.22,150.51 357.33,105.33 460.44,112.07 563.56,155.23 666.67,116.12 769.78,48.00 872.89,79.70 976.00,149.84 976,164" fill="#0969da22"/>
+<path d="M 48.00,163.33 C 99.56,163.33 99.56,164.00 151.11,164.00 C 202.67,164.00 202.67,150.51 254.22,150.51 C 305.78,150.51 305.78,105.33 357.33,105.33 C 408.89,105.33 408.89,112.07 460.44,112.07 C 512.00,112.07 512.00,155.23 563.56,155.23 C 615.11,155.23 615.11,116.12 666.67,116.12 C 718.22,116.12 718.22,48.00 769.78,48.00 C 821.33,48.00 821.33,79.70 872.89,79.70 C 924.44,79.70 924.44,149.84 976.00,149.84" fill="none" stroke="#0969da" stroke-width="2.0"/>
 <circle cx="48.0" cy="163.32558139534885" r="3" fill="#0969da"/>
 <circle cx="151.11111111111111" cy="164.0" r="3" fill="#0969da"/>
 <circle cx="254.22222222222223" cy="150.51162790697674" r="3" fill="#0969da"/>
@@ -20,7 +20,7 @@
 <circle cx="666.6666666666666" cy="116.11627906976744" r="3" fill="#0969da"/>
 <circle cx="769.7777777777778" cy="48.0" r="3" fill="#0969da"/>
 <circle cx="872.8888888888889" cy="79.69767441860466" r="3" fill="#0969da"/>
-<circle cx="976.0" cy="150.51162790697674" r="3" fill="#0969da"/>
+<circle cx="976.0" cy="149.8372093023256" r="3" fill="#0969da"/>
 <text x="48.0" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#656d76" text-anchor="middle">Jun</text>
 <text x="151.11111111111111" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#656d76" text-anchor="middle">Jul</text>
 <text x="254.22222222222223" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#656d76" text-anchor="middle">Aug</text>
@@ -32,3 +32,4 @@
 <text x="872.8888888888889" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#656d76" text-anchor="middle">Feb</text>
 <text x="976.0" y="178" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" font-weight="normal" fill="#656d76" text-anchor="middle">Mar</text>
 <line x1="48" y1="164" x2="976" y2="164" stroke="#8c959f" stroke-width="0.8" opacity="0.6"/>
+</svg>
