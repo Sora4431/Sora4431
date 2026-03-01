@@ -252,7 +252,7 @@ def fetch_all_contributions():
         chunk_start = chunk_end + datetime.timedelta(days=1)
         time.sleep(0.2)  # be gentle with the API
 
-    return totals, monthly, lang_bytes
+    return totals, monthly, lang_bytes, created
 
 
 def fetch_repo_stats():
@@ -555,20 +555,27 @@ def make_activity_svg(theme, totals, repo_count):
 # Card: Monthly Contributions Line Chart  (1000 x 200)
 # ---------------------------------------------------------------------------
 
-def make_monthly_svg(theme, monthly):
+def make_monthly_svg(theme, monthly, account_created=None):
     W, H = 1000, 200
     svg = svg_open(W, H, theme)
 
     svg += svg_text(24, 34, "Monthly Contributions", size=15, weight="600", fill=theme["text"])
 
-    # Build last 18 months list
+    # Build all months from account creation to now
     now = datetime.datetime.utcnow()
-    months = []
-    for i in range(17, -1, -1):
-        m = now - datetime.timedelta(days=i * 30)
-        key = m.strftime("%Y-%m")
-        label = m.strftime("%b")
-        months.append((key, label))
+    if account_created:
+        start = account_created.replace(day=1)
+    else:
+        start = (now - datetime.timedelta(days=17 * 30)).replace(day=1)
+
+    months = []  # list of (key "YYYY-MM", datetime)
+    cur = start
+    while cur.strftime("%Y-%m") <= now.strftime("%Y-%m"):
+        months.append((cur.strftime("%Y-%m"), cur))
+        if cur.month == 12:
+            cur = cur.replace(year=cur.year + 1, month=1)
+        else:
+            cur = cur.replace(month=cur.month + 1)
 
     values = [monthly.get(k, 0) for k, _ in months]
     max_val = max(values) if values else 1
@@ -599,13 +606,14 @@ def make_monthly_svg(theme, monthly):
         svg += svg_text(chart_l - 4, gy + 4, fmt_num(gv),
                         size=8, fill=theme["muted"], anchor="end")
 
-    # Area fill path (closed polygon back to baseline)
+    # Area fill
     coords = [(pt_x(i), pt_y(v)) for i, v in enumerate(values)]
     area_pts = [f"{chart_l},{chart_b}"]
     for x, y in coords:
         area_pts.append(f"{x:.2f},{y:.2f}")
     area_pts.append(f"{chart_r},{chart_b}")
-    svg += f'<polygon points="{" ".join(area_pts)}" fill="{theme["area_fill"]}"/>\n'
+    svg += f'<polygon points="{" ".join(area_pts)}" fill="{theme["area_fill"]}"/>
+'
 
     # Smooth line using cubic bezier
     d_parts = [f"M {coords[0][0]:.2f},{coords[0][1]:.2f}"]
@@ -617,22 +625,32 @@ def make_monthly_svg(theme, monthly):
     svg += svg_path(" ".join(d_parts), fill="none",
                     stroke=theme["accent"], sw=2.0)
 
-    # Dots at each point
-    for i, (x, y) in enumerate(coords):
-        svg += svg_circle(x, y, 3, theme["accent"])
+    # Dots: skip when too crowded
+    if n_pts <= 36:
+        for x, y in coords:
+            svg += svg_circle(x, y, 3, theme["accent"])
 
-    # Month labels
-    for i, (key, label) in enumerate(months):
+    # X-axis labels:
+    #   <= 24 months -> show every month name ("Jan", "Feb", ...)
+    #   >  24 months -> show only January of each year as "YYYY"
+    for i, (key, dt) in enumerate(months):
         lx = pt_x(i)
-        svg += svg_text(lx, chart_b + 14, label,
-                        size=9, fill=theme["muted"], anchor="middle")
+        if n_pts <= 24:
+            svg += svg_text(lx, chart_b + 14, dt.strftime("%b"),
+                            size=9, fill=theme["muted"], anchor="middle")
+        else:
+            if dt.month == 1:
+                svg += svg_line(lx, chart_b, lx, chart_b + 4,
+                                stroke=theme["axis"], sw=0.8)
+                svg += svg_text(lx, chart_b + 14, dt.strftime("%Y"),
+                                size=9, fill=theme["muted"], anchor="middle")
 
     # Baseline
     svg += svg_line(chart_l, chart_b, chart_r, chart_b,
                     stroke=theme["axis"], sw=0.8, opacity=0.6)
 
-    svg += svg_close()
     return svg
+
 
 
 # ---------------------------------------------------------------------------
@@ -645,7 +663,7 @@ def main():
     print("=== Fetching GitHub stats for", GITHUB_USER, "===")
 
     print("\n[1/2] Fetching contributions...")
-    totals, monthly, lang_bytes = fetch_all_contributions()
+    totals, monthly, lang_bytes, account_created = fetch_all_contributions()
 
     print("\n[2/2] Fetching repo/star counts...")
     repo_count, star_count = fetch_repo_stats()
@@ -664,8 +682,8 @@ def main():
         "charts-light.svg":   make_charts_svg(LIGHT, lang_bytes),
         "activity-dark.svg":  make_activity_svg(DARK, totals, repo_count),
         "activity-light.svg": make_activity_svg(LIGHT, totals, repo_count),
-        "monthly-dark.svg":   make_monthly_svg(DARK, monthly),
-        "monthly-light.svg":  make_monthly_svg(LIGHT, monthly),
+        "monthly-dark.svg":   make_monthly_svg(DARK, monthly, account_created),
+        "monthly-light.svg":  make_monthly_svg(LIGHT, monthly, account_created),
     }
 
     for name, content in files.items():
