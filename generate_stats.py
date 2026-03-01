@@ -649,6 +649,7 @@ def make_monthly_svg(theme, monthly, account_created=None):
     svg += svg_line(chart_l, chart_b, chart_r, chart_b,
                     stroke=theme["axis"], sw=0.8, opacity=0.6)
 
+    svg += svg_close()
     return svg
 
 
