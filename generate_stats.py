@@ -683,8 +683,8 @@ def main():
         "charts-light.svg":   make_charts_svg(LIGHT, lang_bytes),
         "activity-dark.svg":  make_activity_svg(DARK, totals, repo_count),
         "activity-light.svg": make_activity_svg(LIGHT, totals, repo_count),
-        "monthly-dark.svg":   make_monthly_svg(DARK, monthly, account_created),
-        "monthly-light.svg":  make_monthly_svg(LIGHT, monthly, account_created),
+        "monthly2-dark.svg":   make_monthly_svg(DARK, monthly, account_created),
+        "monthly2-light.svg":  make_monthly_svg(LIGHT, monthly, account_created),
     }
 
     for name, content in files.items():
