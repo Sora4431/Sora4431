@@ -1,24 +1,12 @@
 # Hi there 👋 I'm Sora4431
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/activity-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/activity-light.svg">
-    <img src="./output/assets/svg/activity-dark.svg" alt="Activity Radar" width="400" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/overview-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/overview-light.svg">
-    <img src="./output/assets/svg/overview-dark.svg" alt="GitHub Stats" width="400" />
-  </picture>
+  <img src="https://github-readme-stats.vercel.app/api?username=Sora4431&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sora4431&layout=compact&theme=dark&hide_border=true" alt="Top Languages" height="165" />
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/charts-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/charts-light.svg">
-    <img src="./output/assets/svg/charts-dark.svg" alt="Top Languages" width="820" />
-  </picture>
+  <img src="https://github-profile-trophy.vercel.app/?username=Sora4431&theme=darkhub&no-frame=true&column=7" alt="Trophy" />
 </p>
 
 <p align="center">
@@ -60,6 +48,5 @@
 ---
 
 <div align="center">
-  <sub>Stats updated weekly · Market data updated daily after US market close</sub>
+  <sub>Market data updated daily after US market close</sub>
 </div>
-
