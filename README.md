@@ -23,9 +23,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/monthly-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/monthly-light.svg">
-    <img src="./output/assets/svg/monthly-dark.svg" alt="Monthly Contributions" width="820" />
+    <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/Sora4431/Sora4431/main/output/assets/svg/monthly-dark.svg?v=3">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sora4431/Sora4431/main/output/assets/svg/monthly-light.svg?v=3">
+    <img src="https://raw.githubusercontent.com/Sora4431/Sora4431/main/output/assets/svg/monthly-dark.svg?v=3" alt="Monthly Contributions" width="820" />
   </picture>
 </p>
 
