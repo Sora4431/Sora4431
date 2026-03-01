@@ -2,14 +2,30 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/overview-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/overview-light.svg">
-    <img src="./output/assets/svg/overview-dark.svg" alt="GitHub Stats" width="400" />
+    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/activity-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/activity-light.svg">
+    <img src="./output/assets/svg/activity-dark.svg" alt="Activity Radar" width="495" />
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/languages-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/languages-light.svg">
-    <img src="./output/assets/svg/languages-dark.svg" alt="Top Languages" width="400" />
+    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/overview-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/overview-light.svg">
+    <img src="./output/assets/svg/overview-dark.svg" alt="GitHub Stats" width="495" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/charts-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/charts-light.svg">
+    <img src="./output/assets/svg/charts-dark.svg" alt="Top Languages" width="495" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"  srcset="./output/assets/svg/monthly-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./output/assets/svg/monthly-light.svg">
+    <img src="./output/assets/svg/monthly-dark.svg" alt="Monthly Contributions" width="1000" />
   </picture>
 </p>
 
@@ -43,3 +59,4 @@
 <div align="center">
   <sub>Stats auto-updated weekly via <a href="https://github.com/Sora4431/Sora4431/actions">GitHub Actions</a> · Market data updated daily after US market close</sub>
 </div>
+
