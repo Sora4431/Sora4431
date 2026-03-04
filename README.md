@@ -2,11 +2,6 @@
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Sora4431&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sora4431&layout=compact&theme=dark&hide_border=true" alt="Top Languages" height="165" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Sora4431&theme=darkhub&no-frame=true&column=7" alt="Trophy" />
 </p>
 
 <p align="center">
