@@ -39,6 +39,3 @@
 
 ---
 
-<div align="center">
-  <sub>Market data updated daily after US market close</sub>
-</div>
