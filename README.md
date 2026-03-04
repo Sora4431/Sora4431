@@ -1,7 +1,7 @@
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sora4431&theme=github-compact&hide_border=true&area=true" alt="Contribution Graph" width="65%" />
-  <img src="https://streak-stats.demolab.com/?user=Sora4431&hide_border=true&theme=dark" alt="GitHub Streak" width="30%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sora4431&theme=github-compact&hide_border=true&area=true" alt="Contribution Graph" width="65%" style="vertical-align: middle;" />
+  <img src="https://streak-stats.demolab.com/?user=Sora4431&hide_border=true&theme=dark" alt="GitHub Streak" width="30%" style="vertical-align: middle;" />
 </p>
 
 ---
