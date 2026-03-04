@@ -13,16 +13,17 @@
 <!--START_MARKET_DATA-->
 | Market | Price | Change | Date |
 |--------|-------|--------|------|
-| 🇺🇸 **S&P 500** | $6,816.63 | 📉 -64.99 (-0.94%) | 2026-03-03 |
-| 🛢️ **WTI Crude** | $74.80/bbl | 📈 +3.57 (+5.01%) | 2026-03-03 |
-| 🏦 **US 10Y Yield** | 4.0560% | 📈 +0.0080 (+0.20%) | 2026-03-03 |
+| 🇺🇸 **S&P 500** | $6,869.50 | 📈 +52.87 (+0.78%) | 2026-03-04 |
+| 🛢️ **WTI Crude** | $76.11/bbl | 📈 +1.55 (+2.08%) | 2026-03-04 |
+| 🏦 **US 10Y Yield** | 4.0800% | 📈 +0.0240 (+0.59%) | 2026-03-04 |
 
+### 📊 14-Day Market Trends
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Sora4431/market-data/main/chart_sp500.svg" alt="S&P 500" width="30%" />
-  <img src="https://raw.githubusercontent.com/Sora4431/market-data/main/chart_wti.svg" alt="WTI Crude Oil" width="30%" />
-  <img src="https://raw.githubusercontent.com/Sora4431/market-data/main/chart_us10y.svg" alt="US 10-Year Treasury Yield" width="30%" />
-</p>
+![S&P 500](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_sp500.svg)
+
+![WTI Crude Oil](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_wti.svg)
+
+![US 10-Year Treasury Yield](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_us10y.svg)
 
 <!--END_MARKET_DATA-->
 
