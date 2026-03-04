@@ -1,19 +1,7 @@
-# Hi there 👋 I'm Sora4431
-
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"
-      srcset="https://github-readme-activity-graph.vercel.app/graph?username=Sora4431&theme=github-compact&hide_border=true&area=true">
-    <source media="(prefers-color-scheme: light)"
-      srcset="https://github-readme-activity-graph.vercel.app/graph?username=Sora4431&theme=minimal&hide_border=true&area=true">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sora4431&theme=github-compact&hide_border=true&area=true"
-         alt="Contribution Graph" width="600" />
-  </picture>
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Sora4431&hide_border=true&theme=dark" alt="GitHub Streak" width="500" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sora4431&theme=github-compact&hide_border=true&area=true" alt="Contribution Graph" width="65%" />
+  <img src="https://streak-stats.demolab.com/?user=Sora4431&hide_border=true&theme=dark" alt="GitHub Streak" width="30%" />
 </p>
 
 ---
