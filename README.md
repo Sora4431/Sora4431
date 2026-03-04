@@ -1,8 +1,5 @@
 # Hi there 👋 I'm Sora4431
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Sora4431&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" height="165" />
-</p>
 
 <p align="center">
   <picture>
@@ -32,11 +29,11 @@
 
 ### 📊 14-Day Market Trends
 
-![S&P 500](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_sp500.svg)
-
-![WTI Crude Oil](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_wti.svg)
-
-![US 10-Year Treasury Yield](https://raw.githubusercontent.com/Sora4431/market-data/main/chart_us10y.svg)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Sora4431/market-data/main/chart_sp500.svg" alt="S&P 500" width="30%" />
+  <img src="https://raw.githubusercontent.com/Sora4431/market-data/main/chart_wti.svg" alt="WTI Crude Oil" width="30%" />
+  <img src="https://raw.githubusercontent.com/Sora4431/market-data/main/chart_us10y.svg" alt="US 10-Year Treasury Yield" width="30%" />
+</p>
 
 <!--END_MARKET_DATA-->
 
